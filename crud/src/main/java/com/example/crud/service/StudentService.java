@@ -32,4 +32,8 @@ public class StudentService {
     public void deleteStudent(int rno) {
         studentRepo.deleteById(rno);
     }
+
+    public List<Student> getStudentsByTechnology(String tech) {
+        return studentRepo.getStudentsByTechnology(tech);
+    }
 }

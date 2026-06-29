@@ -23,6 +23,11 @@ public class StudentController {
         return StudentService.getAllStudents();
     }
 
+    @GetMapping("/students/technology/{tech}")
+    public List<Student> getStudentsByTechnology(@PathVariable String tech) {
+        return StudentService.getStudentsByTechnology(tech);
+    }
+
     @PostMapping("/students")
     public Student addStudent(@RequestBody Student student) {
         return StudentService.addStudent(student);

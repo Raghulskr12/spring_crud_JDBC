@@ -32,4 +32,9 @@ public class StudentController {
     public Student getStudent(@PathVariable("rno") int rno) {
         return StudentService.getStudent(rno);
     }
+
+    @PutMapping("/students")
+    public Student updateStudent(@RequestBody Student student) {
+        return StudentService.updateStudent(student);
+    }
 }

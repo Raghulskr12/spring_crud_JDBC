@@ -11,5 +11,5 @@ public class Student {
     private int id;
     private String Name;
     private String gender;
-    private int technology;
+    private String technology;
 }

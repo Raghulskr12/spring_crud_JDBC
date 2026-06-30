@@ -3,6 +3,7 @@ package com.example.crud.controller;
 import com.example.crud.model.Student;
 import com.example.crud.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -47,5 +48,11 @@ public class StudentController {
     public String deleteStudent(@PathVariable("rno") int rno) {
         StudentService.deleteStudent(rno);
         return "Deleted student with id " + rno;
+    }
+
+    @GetMapping("/students/filter")
+    public List<Student> getStudentsByGenderAndTechnology(@Param("gender")  String gender, @Param("technology") String technology) {
+        return StudentService.getStudentsByGenderAndTechnology(gender, technology);
+
     }
 }

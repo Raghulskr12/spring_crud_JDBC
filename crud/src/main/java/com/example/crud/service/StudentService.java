@@ -36,4 +36,8 @@ public class StudentService {
     public List<Student> getStudentsByTechnology(String tech) {
         return studentRepo.getStudentsByTechnology(tech);
     }
+
+    public List<Student> getStudentsByGenderAndTechnology(String gender, String technology) {
+        return studentRepo.getStudentsByGenderAndTechnology(gender, technology);
+    }
 }
